@@ -1,0 +1,7 @@
+Name	Tag	Ort	Featurename	Tätigkeit	Aufwand	Projekt-Nr.	Projekt	KV
+John Doe	01.01.2024	New York	Feature X	Description X	9,50 h	12345	Project X	KV
+Jane Smith	02.01.2024	Los Angeles	Feature Y	Description Y	4,00 h	67890	Project Y	NKV
+Alice Johnson	03.01.2024	Chicago	Feature Z	Description Z	5,00 h	54321	Project Z	KV
+Bob Brown	04.01.2024	Houston	Feature W	Description W	9,00 h	98765	Project W	NKV
+Charlie Davis	05.01.2024	Phoenix	Feature V	Description V	10,00 h	11223	Project V	KV
+				Summe der Aufwände	37,50 h

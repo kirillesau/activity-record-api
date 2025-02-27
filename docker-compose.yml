@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  activity-record-api:
+    image: openjdk:21-jdk-slim
+    container_name: activity-record-api
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://activity-record-db:5432/springdb
+      SPRING_DATASOURCE_USERNAME: postgres
+      SPRING_DATASOURCE_PASSWORD: postgres
+    ports:
+      - "8080:8080"
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: ./gradlew bootRun
+    depends_on:
+      - activity-record-db
+  activity-record-db:
+    image: postgres:17
+    container_name: activity-record-db
+    environment:
+      POSTGRES_DB: springdb
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - activity-record-db-data:/var/lib/postgresql/data
+volumes:
+  activity-record-db-data:
